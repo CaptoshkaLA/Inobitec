@@ -19,7 +19,6 @@ import java.util.List;
 public class Patient_list {
 
     @XmlElement(name = "patient")
-//    private List<Patient> patients = null;
 
     private List<Patient> patients;
 
