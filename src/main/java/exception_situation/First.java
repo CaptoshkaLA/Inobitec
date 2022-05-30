@@ -1,9 +1,9 @@
-package exception;
+package exception_situation;
 
-import situations.Situation;
+import correctly_situations.Situation;
 
 /**
- *   Не задан ни один из аргументов
+ *  A class that implements the first scenario when a user error is issued
  */
 public class First implements Situation {
 

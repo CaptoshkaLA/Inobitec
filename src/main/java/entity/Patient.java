@@ -1,5 +1,8 @@
 package entity;
 
+import XML_auxiliary_functionality.Auxiliary_class;
+import XML_parser.Parser;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -9,6 +12,9 @@ import java.util.Date;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "patient")
 
+/**
+ * A class that implements the patient entity
+ */
 public class Patient {
 
     @XmlElement(name = "first_name")
@@ -72,6 +78,13 @@ public class Patient {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public void print() {
+        System.out.println(Auxiliary_class.getName(getFirstName(), getLastName(), getMiddleName()));
+        System.out.println(Auxiliary_class.ageCalculator(Parser.parseDate(getBirthday().toString())));
+        System.out.println(getGender());
+        System.out.println(getPhone());
     }
 
     @Override
